@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .container {
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .main-card {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cards {
+      display: flex;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .card {
+      flex: 0 0 16.6666%;
+      padding: 0 10px;
+    }
+
+    .content {
+      background-color: #f4f4f4;
+      padding: 20px;
+      text-align: center;
+      border-radius: 5px;
+    }
+
+    .img img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
+    .title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .post {
+      font-size: 14px;
+      color: #888;
+      margin-bottom: 10px;
+    }
+
+    .socials a {
+      color: #888;
+      margin: 0 5px;
+    }
+
+    .arrow-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 30px;
+      height: 30px;
+      background-color: #f4f4f4;
+      border-radius: 50%;
+      border: 1px solid #ccc;
+      cursor: pointer;
+    }
+
+    .arrow-button.left {
+      left: 10px;
+    }
+
+    .arrow-button.right {
+      right: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .card {
+        flex: 0 0 33.3333%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .card {
+        flex: 0 0 50%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="main-card">
+      <div class="cards">
+        <div class="card">
+            <div class="content">
+              <div class="img">
+               <img src="images/img1.jpg" alt="">
+              </div>
+              <div class="details">
+                <div class="name">Andrew Neil</div>
+                <div class="job">Web Designer</div>
+              </div>
+              <div class="media-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+              </div>
+            </div>
+           </div>
+           <div class="card">
+            <div class="content">
+              <div class="img">
+               <img src="images/img2.jpg" alt="">
+              </div>
+              <div class="details">
+                <div class="name">Jasmine Carter</div>
+                <div class="job">UI Designer</div>
+              </div>
+              <div class="media-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+              </div>
+            </div>
+           </div>
+           <div class="card">
+            <div class="content">
+              <div class="img">
+               <img src="images/img3.jpg" alt="">
+              </div>
+              <div class="details">
+                <div class="name">Justin Chung</div>
+                <div class="job">Web Devloper</div>
+              </div>
+              <div class="media-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+              </div>
+            </div>
+           </div>
+     
+           <div class="card">
+            <div class="content">
+              <div class="img">
+                <img src="images/img4.jpg" alt="">
+              </div>
+              <div class="details">
+                <div class="name">Appolo Reef</div>
+                <div class="job">Web Designer</div>
+              </div>
+              <div class="media-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+              </div>
+            </div>
+           </div>
+           <div class="card">
+            <div class="content">
+              <div class="img">
+                -<img src="images/img5.jpg" alt="">
+              </div>
+              <div class="details">
+                <div class="name">Adrina Calvo</div>
+                <div class="job">UI Designer</div>
+              </div>
+              <div class="media-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+              </div>
+            </div>
+           </div>
+           <div class="card">
+            <div class="content">
+              <div class="img">
+                <img src="images/img6.jpeg" alt="">
+              </div>
+              <div class="details">
+                <div class="name">Nicole Lewis</div>
+                <div class="job">Web Devloper</div>
+              </div>
+              <div class="media-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+              </div>
+            </div>
+           </div>
+        </div>
+      </div>
+      <label for="one" class="arrow-button left"></label>
+      <label for="two" class="arrow-button right"></label>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const cards = document.querySelector(".cards");
+      const cardWidth = document.querySelector(".card").offsetWidth;
+      const totalCards = document.querySelectorAll(".card").length;
+      const visibleCards = Math.min(6, totalCards);
+      const maxPosition = -(cards.offsetWidth - (cardWidth * visibleCards));
+      let currentPosition = 0;
+
+      function moveCards(direction) {
+        if (direction === "left" && currentPosition < 0) {
+          currentPosition += cardWidth;
+        } else if (direction === "right" && currentPosition > maxPosition) {
+          currentPosition -= cardWidth;
+        }
+        cards.style.transform = `translateX(${currentPosition}px)`;
+      }
+
+      document.querySelector(".arrow-button.left").addEventListener("click", function() {
+        moveCards("left");
+      });
+
+      document.querySelector(".arrow-button.right").addEventListener("click", function() {
+        moveCards("right");
+      });
+    });
+  </script>
+</body>
+</html>
